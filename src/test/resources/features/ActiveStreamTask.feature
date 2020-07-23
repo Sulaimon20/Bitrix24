@@ -20,10 +20,8 @@ Feature: As a user, I should be able to assign tasks by clicking on Task tab und
   from local disks, download from external drive, select documents from bixtrix24,
   and create files to upload.
     When User clicks on <Task> button
-    Then User writes in <Thing to do> box "Upload file"
-    * User writes in <Message body> box "The file  was uploaded"
-    * User clicks on <upload files> icon
-    * User clicks <upload files and images> and upload file and pictures from local disks
+    Then User writes in <Thing to do> box text "Upload file" and text <The file  was uploaded> in <Message body> box
+    * User clicks on <Upload files> icon and upload "TeamTestCases" file  and "LoginVyTrack" picture from local disks
     * User clicks <Send> button
     * User clicks on <Task> button om menu bar
     * User see the the uploaded files

@@ -28,6 +28,14 @@ public class Bitrix24TaskPages {
     public WebElement postVisualEditor;
 
 
+    //Scenario 3
+
+    @FindBy(xpath = "//span[@id='bx-b-uploadfile-task-form-lifefeed_task_form']")
+    public WebElement UploadfilesIcon;
+
+
+
+
 
 
 

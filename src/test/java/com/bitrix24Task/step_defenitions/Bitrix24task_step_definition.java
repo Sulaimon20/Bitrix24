@@ -4,6 +4,7 @@ import com.bitrix24Task.pages.Bitrix24TaskPages;
 import com.bitrix24Task.pages.LoginPage;
 import com.bitrix24Task.utilities.ConfigurationReader;
 import com.bitrix24Task.utilities.Driver;
+import com.bitrix24Task.utilities.Methods;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -29,9 +30,7 @@ public class Bitrix24task_step_definition {
 
 
     }
-
-
-
+//Scenario 1
     @When("User clicks on <Task> button")
     public void user_clicks_on_task_button() {
         wait.until(ExpectedConditions.visibilityOf(bitrix24TaskPages.taskButton)).click();
@@ -50,6 +49,7 @@ public class Bitrix24task_step_definition {
 
     }
 
+//Scenario 2
 
     @Then("User clicks on the letter <A> in the bottom of the message box")
     public void userClicksOnTheLetterAInTheBottomOfTheMessageBox() {
@@ -70,22 +70,17 @@ public class Bitrix24task_step_definition {
 
 //Scenario #3
 
-    @Then("User writes in <Thing to do> box {string}")
-    public void user_writes_in_thing_to_do_box(String string) {
+    @Then("User writes in <Thing to do> box text {string} and text <The file  was uploaded> in <Message body> box")
+    public void user_writes_in_thing_to_do_box_text_and_text_the_file_was_uploaded_in_message_body_box(String string) {
+
+        Methods.highlightElement(bitrix24TaskPages.UploadfilesIcon);
 
     }
 
 
-    @Then("User writes in <Message body> box {string}")
-    public void user_writes_in_message_body_box(String string) {
 
-    }
-    @Then("User clicks on <upload files> icon")
-    public void user_clicks_on_upload_files_icon() {
-
-    }
-    @Then("User clicks <upload files and images> and upload file and pictures from local disks")
-    public void user_clicks_upload_files_and_images_and_upload_file_and_pictures_from_local_disks() {
+    @Then("User clicks on <Upload files> icon and upload {string} file  and {string} picture from local disks")
+    public void user_clicks_on_upload_files_icon_and_upload_file_and_picture_from_local_disks(String string, String string2) {
 
     }
     @Then("User clicks <Send> button")
