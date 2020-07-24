@@ -30,8 +30,11 @@ public class Bitrix24TaskPages {
 
     //Scenario 3
 
-    @FindBy(xpath = "//span[@id='bx-b-uploadfile-task-form-lifefeed_task_form']")
-    public WebElement UploadfilesIcon;
+    @FindBy(xpath = "(//span[@title='Upload files'])[3]")
+    public WebElement uploadfilesIcon;
+
+    @FindBy(xpath = "(//input[@type='file'])[5]")
+    public WebElement uploadfileButton;
 
 
 
