@@ -19,11 +19,6 @@ public class Hooks {
 
     @After(order = 1)
     public void tearDownScenario(Scenario scenario){
-        //System.out.println("-----> After annotation: Closing browser");
-
-       // System.out.println("scenario.getName() = " + scenario.getName());
-       // System.out.println("scenario.getSourceTagNames() = " + scenario.getSourceTagNames());
-       // System.out.println("scenario.isFailed() = " + scenario.isFailed());
 
         //#1 we need to take a screen shot using Selenium
         // #2 we are going to attach it into our report using attach method
@@ -51,6 +46,8 @@ public class Hooks {
     @AfterStep
     public void tearDownStep(){
         System.out.println("===========> AFTERSTEP: TAKING SCREENSHOT <===========");
+
+        Driver.closeDriver();
     }
 
 
